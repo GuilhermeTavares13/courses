@@ -1,6 +1,6 @@
 import {input} from '@inquirer/prompts';
 import {createWriteStream} from "fs";
-import * as qr from "qr-image";
+import qr from "qr-image";
 
 const userURL = await input({ message: 'Enter an URL: ' });
 console.log(userURL);
