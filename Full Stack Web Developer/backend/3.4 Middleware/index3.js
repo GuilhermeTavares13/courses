@@ -1,7 +1,9 @@
 import express from "express";
+import req from "express/lib/request.js";
 
 const app = express();
 const port = 3000;
+
 
 app.use(logger);
 
@@ -13,8 +15,9 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+
 function logger(req,res,next) {
-    console.log("Request method: ", req.method);
-    console.log("Request url", req.url);
-    next();
+  console.log("Request method: ", req.method);
+  console.log("Request URL: ", req.url);
+  next();
 }
